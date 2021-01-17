@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLASS</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Relax...</a>
+            <div class="toggle" onclick="menuToggle();"></div>
+        </header>
+        <div class="glass"></div>
+        <div class="content">
+            <h2>Happiness...<br><span>crystal clear</span></h2>
+        </div>
+        <video src="images/water.mp4" autoplay muted loop></video>
+        <ul class="sci">
+            <li style="--i:1"><a href="#">Facebook</a></li>
+            <li style="--i:2"><a href="#">Twitter</a></li>
+            <li style="--i:3"><a href="#">Instagram</a></li>
+
+        </ul>
+        <ul class="navigation">
+            <li style="--i:1;"><a href="#">Home</a></li>
+            <li style="--i:2;"><a href="#">About</a></li>
+            <li style="--i:3;"><a href="#">Tour</a></li>
+            <li style="--i:4;"><a href="#">Contact</a></li>
+        </ul>
+        <div class="content">
+
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="images/play.png" id="icon"> </div>
+        </div>
+        <audio id="mySong">
+            <source src="images/song.mp3" type="audio/mp3">
+       
+           </audio>
+        <script>
+            var mySong = document.getElementById("mySong");
+            var icon = document.getElementById("icon");
+            icon.onclick = function() {
+                if (mySong.paused) {
+                    mySong.play();
+                    icon.src = "pause.png";
+                } else {
+                    mySong.pause();
+                    icon.src = "play.png";
+
+                }
+            }
+        </script>
+    </section>
+    <script type="text/javascript">
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggle');
+            const section = document.querySelector('section');
+            toggleMenu.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
